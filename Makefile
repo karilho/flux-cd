@@ -15,4 +15,5 @@ repo=
 gitrepo:
 	flux create source git podinfo \
 		--url=https://github.com/karilho/$(repo) \
-		--branch=main
+		--branch=main \
+		--token $$GITHUB_TOKEN
