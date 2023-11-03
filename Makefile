@@ -10,3 +10,9 @@ bootstrap:
 	  --path=./ \
 	  --read-write-key \
 	  --personal
+
+repo=
+gitrepo:
+	flux create source git podinfo \
+		--url=https://github.com/karilho/$(repo) \
+		--branch=main
