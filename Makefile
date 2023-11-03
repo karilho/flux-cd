@@ -13,7 +13,7 @@ bootstrap:
 
 repo=
 gitrepo:
-	flux create source git podinfo \
-		--url=https://github.com/karilho/$(repo) \
-		--branch=main \
-		--token $$GITHUB_TOKEN
+	flux create secret git $(repo) \
+        --url=https://github.com/karilho/$(repo) \
+        --username=karilho \
+        --password=$$GITHUB_TOKEN
