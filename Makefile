@@ -13,7 +13,8 @@ bootstrap:
 
 repo=
 gitrepo:
-	flux create secret git $(repo) \
-        --url=https://github.com/karilho/$(repo) \
-        --username=karilho \
-        --password=$$GITHUB_TOKEN
+	flux create source git general-market-go \
+		--url=https://github.com/karilho/general-market-go \
+		--branch=main \
+		--interval=1m \
+		--export > ./general-market-go.yaml
